@@ -1,0 +1,57 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    display: block;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    margin: 25px 55px 15px 55px;
+}
+
+nav ul {
+    text-align: right;
+    width: 50%;
+    position: fixed;
+
+}
+
+li {
+    display: list-item;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 55px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#logo {
+    height: 186px;
+    width: 237px;
+}
+
+.intro {
+    top: 25px;
+    background: #e0ebe8;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}    
+
+#reviews {
+    text-align: center;
+}
+
+
+footer p {
+
+    text-align: center;
+}
