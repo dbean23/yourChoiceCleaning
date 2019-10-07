@@ -1,30 +1,101 @@
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 1000px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    #logo {
+        height: 350px;
+        width: 375px;
+    }
+    .topnav.responsive {position: fixed;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+  /* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  nav a:active {
+    background-color: #4CAF50; 
+  }
+  
+/* Document ***/
+
+
 body {
     font-family: 'Montserrat', sans-serif;
     width: 100%;
-    display: block;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    margin: 25px 55px 15px 55px;
-}
 
-nav ul {
-    text-align: right;
-    width: 50%;
-    position: fixed;
+/* Nav */
 
-}
 
-li {
-    display: list-item;
-}
 
 nav ul li {
     display: inline-block;
     padding: 55px;
+    margin: 0;
+    list-style: none;
+    display: list-item;
+    
 
+}
+
+nav ul li :hover {
+    border-bottom: solid 2px #000000;
+    border-radius: 2px;
 }
 
 nav ul li a {
@@ -32,26 +103,311 @@ nav ul li a {
     color: #000000;
 }
 
-#logo {
-    height: 186px;
-    width: 237px;
+
+nav ul, li, a {
+    display: in-line;
+    list-style: none;
+    color: #000;
 }
 
-.intro {
-    top: 25px;
+
+/* Body */
+
+body{
+    margin:0;
+    padding:0;
+}
+
+#logo {
+height: 350px;
+width: 380px;
+border-radius: 5px;
+box-shadow: 5px 5px rgb(0, 0, 0, .2);
+}
+
+#phone {
+    color:  #f1c40f;
+}
+
+.section {
+    margin-bottom: 10px;
+    clear: both;
     background: #e0ebe8;
     display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
+    clear: both;
+    min-height: 85vh;
+    padding-top: 15vh;
+    min-width: 100vw;
 }    
+
+.contact-tile { 
+    display: inline-block;
+    justify-content: center;
+    align-self: center;
+    vertical-align: middle;
+}
+
+#business-hours-title {
+    text-align: center;
+}
+
+#business-hours {
+    justify-content: left;
+}
+
+.input-box {
+    width: 250px;
+    height: 25px;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+    border-radius: 7px;
+    border: none;
+    color: #000000;
+}
+
+.message-box {
+    width: 250px;
+    height: 125px;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+    border-radius: 7px;
+    border: none;
+    color: #000000;
+}
+
+#submit {
+    background-color: #f1c40f;
+    height: 35px;
+    width: 125px;
+    font-weight: 900;
+    border-radius: 7px;
+    border: none;
+}
+
+#submit:hover {
+    border: 2px solid white;
+}
+
+#contact-us li{
+    padding: 1%;
+}
+#contact-us form{
+    padding: 5%;
+}
+
+.gallery-pic {
+    height: 334px;
+    width: 334px;  
+}
 
 #reviews {
     text-align: center;
 }
 
+.review-tile {
+    display: inline-block;
+}
+
+
+.area-tile {
+    display: inline-block;
+    padding: 2%;
+}
+
+
+#rotate-img{
+    transform: rotate(90deg);
+}
+
+.active {
+    border-bottom: solid 2px #000000;
+    border-radius: 2px;
+}
+
+#contact-form {
+    
+    background:  #C8F7C5;
+    padding: 20px;
+    box-shadow: 5px 5px 5px 5px #ddd;
+    border-radius: 5px;
+    margin: 20px;
+
+}
+
+#facebook {
+    margin-bottom: 10px;
+    display: inline-grid;
+}
+
+
+#who-we-are p {
+    width: 375px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+
+#services div:child {
+    margin-bottom: 20px;
+}
+
+
+/* Footer */
+
+.bottomFooter {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    z-index: 6;
+    left: 0;
+    bottom: 0;
+    background-color: #333;
+    color: white;
+    font-size: .50em;
+}
+
+footer i {
+    color: white;
+    padding: 10px;
+}
 
 footer p {
-
     text-align: center;
+}
+
+.bottomFooter p a i:hover {
+    background-color: #C8F7C5;
+    border: 25% clear;
+}
+
+* {box-sizing:border-box}
+
+/*SLIDESHOWS*/
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+
+
+}
+
+.text1 {
+    color: #000;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    background: white;
+    border-radius: 5px;
+  
+  
+  }
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  background: white;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+} 
+
+
+
+/*Multiple Slidwshow*/
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.slideshow-pics {
+    max-height: 80vh;
+    max-width: 100vw;
 }

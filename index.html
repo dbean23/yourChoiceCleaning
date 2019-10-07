@@ -2,82 +2,226 @@
 <html lang='en'>
     <head>
         <meta charset='UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Your Choice Cleaning, LLC</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="jquery-3.3.1.min.js"></script>
     </head>
     <body>
-        <header>
-            <div id="inner-left">
-                <img id="logo" src="your-choice-logo.jpg">
+        <script src="script.js"></script>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+        <div id="page-wrapper">
+            <div class="topnav" id="myTopNav"> 
+                <a href="#welcome-section" onclick="closeResponsiveMenu()" class="active link">Home</a>   
+                <a href="#scheduling" onclick="closeResponsiveMenu()" class="link">Make Appointment</a>
+                <a href="#contact-us" onclick="closeResponsiveMenu()" class="link">Contact Us</a>
+                <a href="#services" onclick="closeResponsiveMenu()" class="link">Services</a>
+                <a href="#gallery" onclick="closeResponsiveMenu()" class="link">Gallery</a>
+                <a href="#reviews" onclick="closeResponsiveMenu()" class="link">Reviews</a> 
+                <a href="#areas-served" onclick="closeResponsiveMenu()" class="link">Areas Served</a>
+                <!-- <a href="#facebook" onclick="closeResponsiveMenu()" class="link">Facebook</a> -->
+                <a href="#who-we-are" onclick="closeResponsiveMenu()" class="link">About Us</a>
+                <a href="javascript:void(0);" class="icon" onclick="openResponsiveMenu()"><i class="fa fa-bars"></i></a>
             </div>
-            <div id="inner-right">
-                <nav>    
-                    <ul>
-                        <li><a href="#contact-us">Contact Us</a></li>
-                        <li><a href="#reviews">Reviews</li></a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#scheduling">Scheduling</a></li>
-                        <li><a href="#areas-served">Areas Served</a></li>
-                    </ul>
-                </nav>
+
+            <div id="welcome-section" class="section slide-section">         
+                <!-- <img id="logo" src="your-choice-logo.jpg"> -->
+                <img src="https://github.com/dbean23/yourChoiceCleaning/blob/master/clean-home-small-62kb.jpg?raw=true">
+                <p>YOUR Choice Cleaning is a professional cleaning service that focuses on YOUR needs.</p>
+                <p><em>State Licensed and Bonded</em></p>
+                <p><a target="_top" style=" background-color: #1E93CC; color: white; height: 40px; text-transform: uppercase; font-family: 'Square Market', 'helvetica neue', helvetica, arial, sans-serif; letter-spacing: 1px; line-height: 38px; padding: 0 28px; border-radius: 3px; font-weight: 500; font-size: 14px; cursor: pointer; display: inline-block; " href="https://squareup.com/appointments/book/3DNWWPYRXVSKY/your-choice-cleaning" rel="nofollow">SCHEDULE YOUR CLEANING ONLINE</a></p>
+                <p>Call to Schedule: <a href="tel:(435) 557-0550">(435) 557-0550 <i id="phone" class="fas fa-phone fa-3x"></i></a></p>
             </div>
-        </header>
+
+            <div id="services" class="section slide-section" class="slide-section">
+                <h1>Your Choice Cleaning Services</h1>
+                <div class="service-icon">
+                    <i class="fas fa-broom fa-3x"></i>
+                </div>
+                <div id="service-description">
+                    <h2>Cleaning</h2>
+                    <p>Baseboards, mirrors, counters, cabinets, door frames, fingerprints/smudges, appliances, glass, dusting, sinks, showers, toilets, floors, vacuuming, hand clean blinds, cleaning window & sliding glass door tracks, etc. </p>
+                    <p>$25/hour per cleaner</p>
+                </div>
+                <div class="service-icon">
+                        <i class="fas fa-archive fa-3x"></i>
+                </div>
+                <div id="service-description">
+                    <h2>Organizing</h2>
+                    <p>We specialize in organization. We organize offices, closets, rooms, you name it!</p>
+                    <p>$25/hour per cleaner</p>
+                </div>
+                <div class="service-icon">
+                    <i class="fas fa-building fa-3x"></i>
+                </div>
+                <div id="service-description">
+                    <h2>Commercial cleaning</h2>
+                    <p>Clean all floors, wipe down and sanitize surfaces, dusting, empty trash cans, clean windows, clean bathrooms.</p>
+                    <p>Message us to establish a personalized plan. Call to set up a bid</p>
+                </div>                                    
+                
+                <hr>
+                <h3>Your cleaning done your way</h3>
+                <p>YOUR Choice Cleaning is a professional cleaning service that focuses on YOUR needs. Let us help make YOUR life a little easier. Contact us for questions or to set up an appointment.</p>
+                <p>We provide our advanced services to both homes and businesses.</p>
+                <hr>
+                <h5>Cancellation Fee</h5>
+                <p>There will be a $50 cancellation fee that will be billed to the client if we don't get a 12 hour notice of the cancellation before the set appointment.</p>
+                <hr style="margin-bottom: 0;">
+            </div> 
 
 
-        <div id="welcome-section" class="intro">
-            <img id="img-clean-home" src="clean-home-adjusted.jpg">
-            <p>YOUR Choice Cleaning is a professional cleaning service that focuses on YOUR needs. Let us help make YOUR life a little easier. Contact us for questions or to set up an appointment.</p>
+            <div id=gallery class="section">
+
+                <h1>Gallery</h1>
+                <!-- Slideshow container -->
+                <div class="slideshow-container" style="text-align: left;">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div style="display:block" class="mySlides fade">
+                        <div class="numbertext">1 / 5</div>
+                        <img class="slideshow-pics" src="https://github.com/dbean23/yourChoiceCleaning/blob/master/UNADJUSTEDNONRAW_thumb_10ee.jpg?raw=true" style="width:100%">
+                        <div class="text">Your Choice Cleaned Bathroom</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 5</div>
+                        <img class="slideshow-pics" src="https://github.com/dbean23/yourChoiceCleaning/blob/master/pantry.jpg?raw=true" style="width:100%">
+                        <div class="text">Your Choice Cleaned Pantry</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 5</div>
+                        <img class="slideshow-pics" src="https://github.com/dbean23/yourChoiceCleaning/blob/master/shower.jpeg?raw=true" style="width:100%">
+                        <div class="text">Your Choice Cleaned Shower Door</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 5</div>
+                        <img class="slideshow-pics" src="https://github.com/dbean23/yourChoiceCleaning/blob/master/UNADJUSTEDNONRAW_thumb_10ef.jpg?raw=true" style="width:100%">
+                        <div class="text">Your Choice Cleaned Bedroom</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 5</div>
+                        <img class="slideshow-pics" src="https://github.com/dbean23/yourChoiceCleaning/blob/master/UNADJUSTEDNONRAW_thumb_10f0.jpg?raw=true" style="width:100%">
+                        <div class="text">Your Choice Cleaned Bathtub</div>
+                    </div>
+                    
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                    
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                </div>
+                    
+                <!-- Gallery Pictures -->
+                <!-- <img class="gallery-pic" alt="Bathroom Before and After" src="https://github.com/dbean23/yourChoiceCleaning/blob/master/UNADJUSTEDNONRAW_thumb_10ee.jpg?raw=true">
+                <img class="gallery-pic" alt="Pantry Before and After" src="https://github.com/dbean23/yourChoiceCleaning/blob/master/pantry.jpg?raw=true">
+                <img class="gallery-pic" alt="Shower Before and After" src="https://github.com/dbean23/yourChoiceCleaning/blob/master/shower.jpeg?raw=true">
+                <img class="gallery-pic" alt="Bedroom Before and After" src="https://github.com/dbean23/yourChoiceCleaning/blob/master/UNADJUSTEDNONRAW_thumb_10ef.jpg?raw=true">
+                <img class="gallery-pic" alt="Bathroom Nozzle" src="https://github.com/dbean23/yourChoiceCleaning/blob/master/UNADJUSTEDNONRAW_thumb_10f0.jpg?raw=true"> -->
+            </div> 
+
+
+            <div id="reviews" class="section">
+                <h1>Just See What Our Past Customers Had to Say
+                </h1>
+                <iframe class="review-tile" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjustcallkent%2Fposts%2F10215288541956958%3A0&width=334" width="334" height="334" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe class="review-tile" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftiffani.hansen.1%2Fposts%2F10212074766334382%3A0&width=334" width="334" height="334" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe class="review-tile" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcharlie.cargill.5%2Fposts%2F10212049910669201%3A0&width=334" width="334" height="334" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>   
+                <iframe class="review-tile" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcarrie.bartletthunter%2Fposts%2F10156328401208395%3A0&width=334" width="334" height="334" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe class="review-tile" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdominic.bohne%2Fposts%2F10156123411518678%3A0&width=334" width="334" height="334" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>   
+                <iframe class="review=tile" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Flisa.hoopes%2Fposts%2F10214509896769428%3A0&width=334" width="334" height="334" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>   
+
+
+            <div id="areas-served" class="section">
+                <h1>Our Cleaning Services are Available in the Following Locations:</h1>
+                <p>We have been cleaning in the Logan - Cache County area.  We are excited to announce we are expanding to the Sevier Country area. </p>                
+                <div class="area-tile">
+                    <h3>Cache County</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d44855.83863780758!2d-111.83303771403311!3d41.73752641083433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1550727071553" width="360" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="area-tile">
+                    <h3>Sevier County</h3>    
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199075.44006184634!2d-112.05030793657232!3d38.77393806653816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874b0e143a1ade99%3A0xa4078e99b0266eeb!2sSevier+County%2C+UT!5e0!3m2!1sen!2sus!4v1550727120365" width="360px" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>        
+                </div>
+            </div>
+
+
+            <div id="scheduling" class="section">
+                <h1>Please Schedule your appointment with us today</h1>
+                <!-- Start Square Appointments Embed Code <script src='https://squareup.com/appointments/buyer/widget/e1206780-1dde-42bc-b198-96de6ead3764/SGEMA5A7DW8J1.js'></script><!-- End Square Appointments EmbedCode -->
+            </div>
+
+            <div id="contact-us" class="section">
+                <h1>Let's Get in Touch</h1>
+
+                <div class="contact-tile" id="contact-form">  
+                    <h3>Do you have a question? Please send us a message:</h3>
+                    <form name="contact" method="POST" data-netlify="true">
+                        <p>
+                        <input class= "input-box" type="text" name="first-name" placeholder="FIRST NAME"/>  
+                        </p>
+                        <p>
+                        <input class="input-box" type="text" name="last-name" placeholder="LAST NAME"/></label>   
+                        </p>
+                        <p>
+                        <input class="input-box" type="email" name="email" placeholder="EMAIL" /></label>
+                        </p>
+                        <p>
+                        <input class="input-box" type="tel" name="phone" placeholder="PHONE NUMBER"></label>
+                        </p>
+                        <p>
+                        <textarea class="message-box" name="message" placeholder="HOW CAN WE HELP?"></textarea></label>
+                        </p>
+                        <p>
+                        <button id="submit" type="submit">Send</button>
+                        </p>
+                    </form>
+                </div>  
+            </div>
+
+            <!-- <div id="facebook" class="section">
+                <h1>Facebook</h1>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fyourchoicecleaning%2F&tabs=timeline&width=600px&height=800px&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1971347046508608" width="350" height="650px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>  -->
+
+            <div id="who-we-are" class="section">
+                <h1>Who Are We?</h1>
+                <img src="https://github.com/dbean23/yourChoiceCleaning/blob/master/morgan-small.jpg?raw=true">
+                <h3>Morgan Atkinson, Owner Your Choice Cleaning, LLC</h3>
+                <p>Your Choice Cleaning is a small locally owned company dedicated to exceeding our customers' cleaning needs.  Morgan Atkinson, owner of Your Choice Cleaning, noticed a lack of quality cleaning services provided to individuals in her community and formed Your Choice Cleaning with a mission to always provide exceptional cleaning at an exceptional price.  The Your Choice Cleaning Team is a small team composed of extremely talented cleaners.</p>
+            </div>
+
+                                
+            <footer class="bottomFooter">
+                <p>    
+                    <a target="_blank" href="https://www.facebook.com/yourchoicecleaning/"><i class="fab fa-facebook-square fa-3x"></i></a> 
+                    <a target="_blank" href="https://www.messenger.com/t/yourchoicecleaning"><i class="fab fa-facebook-messenger fa-3x"></i></a>
+                    <a target="_blank" href="mailto:yourchoicecleaning1@gmail.com"><i class="fas fa-envelope fa-3x"></i></a>
+                    <a target="_blank" href="tel:(435) 557-0550"><i class="fas fa-phone-square fa-3x"></i></a>
+                </p>    
+                <p>All Rights Reserved &copy; 2019 Your Choice Cleaning, LLC</p>
+                
+            </footer>
         </div>
-        <div id="contact-us">
-            <h5>FIND US</h5>
-            <ul>
-                <li>Facebook Messenger: m.me/yourchoicecleaning</li>
-                <li>Call: (435) 557-0550</li>
-                <li>Email: yourchoicecleaning1@gmail.com</li>  
-                <li>Serves Logan and nearby areas.</li> 
-                <li>Also serving the Sevier County area.</li>  
-            </ul>
-
-            <h5>Hours</h5>
-            <hr>
-            <p>8:00 AM - 7:00 PM Monday thru Friday</p>
-            <?php include'freecontactforminstall.php'?>
-        </div>
-        <div id="reviews" class="intro">
-            <h3>Just see what our customers have to say</h3>
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Flisa.hoopes%2Fposts%2F10214509896769428%3A0&width=500" width="500" height="411" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjustcallkent%2Fposts%2F10215288541956958%3A0&width=500" width="500" height="373" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftiffani.hansen.1%2Fposts%2F10212074766334382%3A0&width=500" width="500" height="316" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkdschirado%2Fposts%2F10214297588375484&width=500" width="500" height="161" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcarrie.bartletthunter%2Fposts%2F10156328401208395%3A0&width=500" width="500" height="316" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdominic.bohne%2Fposts%2F10156123411518678%3A0&width=500" width="500" height="373" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcharlie.cargill.5%2Fposts%2F10212049910669201%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-        </div>    
-        <div id="services" class="intro">
-            <h5>Cancellation Fee</h5>
-            <p>Cancelation Fee
-                    Duration varies • $75
-                    There will be a $120 cancellation fee that will be billed to the client if we don't get a 12 hour notice of the cancellation before the set appointment. 
-            </p>
-        </div>    
-        <div id="scheduling" class="intro">
-            <h5>Please Schedule your appointment with us today</h5>
-            <script src='https://squareup.com/appointments/buyer/widget/e1206780-1dde-42bc-b198-96de6ead3764/3DNWWPYRXVSKY.js'></script>
-        </div>
-        <div id="areas-served" class="intro">
-            <p>We have been cleaning in the Logan - Cache County area.  We are excited to announce we are expanding to the Sevier Country area. </p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d44855.83863780758!2d-111.83303771403311!3d41.73752641083433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1550727071553" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199075.44006184634!2d-112.05030793657232!3d38.77393806653816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874b0e143a1ade99%3A0xa4078e99b0266eeb!2sSevier+County%2C+UT!5e0!3m2!1sen!2sus!4v1550727120365" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>        
-        </div>                     
-
-        <footer>
-            <p>&copy; Your Choice Cleaning, LLC</p>
-        </footer>
-
     </body>
 
 </html>
